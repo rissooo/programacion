@@ -3,7 +3,7 @@
 
 int main() {
     int empleados;
-    int puntaje;
+    int puntaje, contE, contB, contR, contD;
     float salario;
     
     while (empleados > 3); {
@@ -27,14 +27,18 @@ int main() {
             } else if (puntaje >= 9 && puntaje <= 10) {
                 printf ("Tu desempeño es EXELENTE, tu bonificacion es del 20%");
                 salario = salario * 1.20;
+                contE++;
             } else if (puntaje >= 7 && puntaje <= 8) {
                 printf ("Tu desempeño es BUENO, tu bonificacion es del 10%\n");
                 salario = salario * 1.10;
+                contB++;
             } else if (puntaje >= 5 && puntaje <= 6) {
                 printf ("Tu desempeño es REGULAR, tu bonificacion es del 5%\n");
                 salario = salario * 0.50;
+                contR++;
             } else (puntaje < 5); {
                 printf ("Tu desempeño es DEFICIENTE, no tienes bonificacion\n");
+                contD++;
             }
 
         }
