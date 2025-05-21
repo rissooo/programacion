@@ -40,9 +40,13 @@ int main() {
                 printf ("Tu desempeño es DEFICIENTE, no tienes bonificacion\n");
                 contD++;
             }
-
+            
         }
+        empleados++;
     }
-
+    printf ("la cantidad de empleados con desempeño exelente es: %d\n", contE);
+    printf ("la cantidad de empleados con desempeño bueno es: %d\n", contB);
+    printf ("la cantidad de empleados con desempeño regular es: %d\n", contR);
+    printf ("la cantidad de empleados con desempeño deficiente es: %d\n", contD);
     return 0;
 }
