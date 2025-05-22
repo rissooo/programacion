@@ -2,57 +2,48 @@
 #include <stdlib.h>
 
 int main() {
-    char empleados;
-    int puntaje, contE, contB, contR, contD, cont_emp;
+    char empleados[50];
+    int puntaje, contE = 0, contB = 0, contR = 0, contD = 0, cont_emp = 1;
     float salario;
     
-    cont_emp = 1;
-    while (cont_emp <= 3); {
-        printf ("Ingresa nombre del empleados\n");
-        scanf ("%d", &empleados);
+    while (cont_emp <= 3) {
+        printf ("Ingresa nombre del empleado\n");
+        scanf ("%s", empleados);
         
-        
-        while (salario > 0) {
+        printf ("Ingrese salario base del empleado ingresado anteriormente\n");
+        scanf ("%f", &salario);
 
-            printf ("Ingrese salario base del empleados ingresado anteriormente\n");
-            scanf ("%f", &salario);
-
-        }
-        
-        while (puntaje > 0 && puntaje < 10) {
-        
+        do {
             printf ("Ingrese puntaje del empleado ingresado anteriormente\n");
             scanf ("%d", &puntaje);
 
             if (puntaje < 0 || puntaje > 10) {
                 printf ("Ingrese un puntaje valido");
-            } else if (puntaje >= 9 && puntaje <= 10) {
-                printf ("Tu desempeño es EXELENTE, tu bonificacion es del 20%");
+            }
+        
+        } while (puntaje < 0 || puntaje > 10);
+            
+             if (puntaje >= 9 && puntaje <= 10) {      
+                printf ("Tu desempeno es EXELENTE, tu bonificacion es del 20%%\n");
                 salario = salario * 1.20;
                 contE++;
             } else if (puntaje >= 7 && puntaje <= 8) {
-                printf ("Tu desempeño es BUENO, tu bonificacion es del 10%\n");
+                printf ("Tu desempeno es BUENO, tu bonificacion es del 10%%\n");
                 salario = salario * 1.10;
-                contB++;
+                contB++;        
             } else if (puntaje >= 5 && puntaje <= 6) {
-                printf ("Tu desempeño es REGULAR, tu bonificacion es del 5%\n");
-                salario = salario * 0.50;
+                printf ("Tu desempeno es REGULAR, tu bonificacion es del 5%%\n");
+                salario = salario * 1.05;
                 contR++;
-            } else (puntaje < 5); {
-                printf ("Tu desempeño es DEFICIENTE, no tienes bonificacion\n");
+            } else {
+                printf ("Tu desempeno es DEFICIENTE, no tienes bonificacion\n");
                 contD++;
             }
-            
-        }
-<<<<<<< HEAD
-      cont_emp++;  
-=======
-        empleados++;
->>>>>>> 1dd0db738820c196eb0c92c1a75c6039fb2dddea
+      cont_emp++; 
     }
-    printf ("la cantidad de empleados con desempeño exelente es: %d\n", contE);
-    printf ("la cantidad de empleados con desempeño bueno es: %d\n", contB);
-    printf ("la cantidad de empleados con desempeño regular es: %d\n", contR);
-    printf ("la cantidad de empleados con desempeño deficiente es: %d\n", contD);
+    printf ("la cantidad de empleados con desempeno exelente es: %d\n", contE);
+    printf ("la cantidad de empleados con desempeno bueno es: %d\n", contB);
+    printf ("la cantidad de empleados con desempeno regular es: %d\n", contR);
+    printf ("la cantidad de empleados con desempeno deficiente es: %d\n", contD);
     return 0;
 }
