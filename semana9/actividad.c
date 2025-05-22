@@ -2,13 +2,15 @@
 #include <stdlib.h>
 
 int main() {
-    int empleados;
-    int puntaje, contE, contB, contR, contD;
+    char empleados;
+    int puntaje, contE, contB, contR, contD, cont_emp;
     float salario;
     
-    while (empleados > 3); {
+    cont_emp = 1;
+    while (cont_emp <= 3); {
         printf ("Ingresa nombre del empleados\n");
         scanf ("%d", &empleados);
+        
         
         while (salario > 0) {
 
@@ -42,6 +44,7 @@ int main() {
             }
 
         }
+      cont_emp++;  
     }
 
     return 0;
