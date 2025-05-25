@@ -52,13 +52,23 @@ void multiplicar_matriz( int fA, int cA, int cB, int a[][MAX], int b[][MAX], int
 }
 
 int main () {
-printf ("\n=========calculadora de matrices=========\n");
-printf ("1: sumar matrices\n");
-printf ("2: restar mtrices\n");
-printf ("3: multiplicacion de matrices\n");
-printf ("4: salir\n");
-printf ("elija una opcion\n");
+    int opcion;
+    int fA, fB, cA, cB;
+    int A[MAX][MAX], B[MAX][MAX], R[MAX][MAX];
+        
+    do {
+        printf ("\n=========calculadora de matrices=========\n");
+        printf ("1: sumar matrices\n");
+        printf ("2: restar mtrices\n");
+        printf ("3: multiplicacion de matrices\n");
+        printf ("4: salir\n");
+        printf ("elija una opcion\n");  
+        scanf ("%d", &opcion);
+        
+    
+    } while (opcion != 4);
 
+    return 0;
 }
 
 
