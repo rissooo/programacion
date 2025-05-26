@@ -50,7 +50,7 @@ void multiplicar_matriz( int fA, int cA, int cB, int a[][MAX], int b[][MAX], int
         }
     }
 }
-
+// doble max para que sea una matriz de 10x10
 int main () {
     int opcion;
     int fA, fB, cA, cB;
@@ -63,12 +63,65 @@ int main () {
         printf ("3: multiplicacion de matrices\n");
         printf ("4: salir\n");
         printf ("elija una opcion\n");  
-        scanf ("%d", &opcion);
+        scanf ("%d\n", &opcion);
         
     
+    
+
+        switch (opcion) {
+            case 1:
+                printf("ingrese las filas y columnas de la matriz\n");
+                scanf ("%d %d", &fA, &fB);
+
+                printf ("ingrese la primer matriz\n");
+                leer_matriz (fA, cA, A);
+
+                printf ("ingrese la segunda matriz\n");
+                leer_matriz (fB, cB,  B);
+
+                sumar_matriz (fA, cA, A, B, R);
+                printf ("el resultado de la suma es:\n");
+                imprimir_matriz (fA, cA, R);
+            
+                break;
+
+            case 2:
+                printf ("ingrese las filas y columnas de la matriz\n");
+                scanf ("%d %d", &fA, &cA);
+
+                printf ("ingrese la primer matriz\n");
+                leer_matriz (fA, cA, A);
+
+                printf ("ingrese la segunda matriz\n");
+                leer_matriz (fB, cB,  B);
+
+                restar_matriz (fA, cA, A, B, R);
+                printf ("resultado de la resta\n");
+                imprimir_matriz (fA, cA, R);
+
+                break;
+
+            case 3:
+                printf("Ingrese cantidad de filas y columnas de la primer matriz:\n");
+                scanf("%d %d", &fA, &cB);
+
+                printf("Ingrese cantidad de columnas de la segunda matriz:\n");
+                scanf("%d", &cB);
+        }
+
     } while (opcion != 4);
 
     return 0;
 }
+
+// agregar para que calcule la determinante
+// agregar para que saque la invertida
+// agregar para que saque el rango
+// agregar para que multiplique por un numero
+// rafa la concha de tu madre
+// agregar para que haga la transposicion
+// agregar para que haga la reduccion de forma escalonada
+// que tenga soporte para fracciones y numeros complejos(numeros con i)
+// IMPORTANTE: que tenga mensajes de error
 
 
