@@ -61,17 +61,15 @@ int main () {
         printf ("1: sumar matrices\n");
         printf ("2: restar mtrices\n");
         printf ("3: multiplicacion de matrices\n");
-        printf ("4: salir\n");
+        printf ("4: calcular el determinante");
+        printf ("5: salir\n");
         printf ("elija una opcion\n");  
-        scanf ("%d\n", &opcion);
+        scanf ("%d", &opcion);
         
-    
-    
-
         switch (opcion) {
             case 1:
                 printf("ingrese las filas y columnas de la matriz\n");
-                scanf ("%d %d", &fA, &fB);
+                scanf ("%d %d", &fA, &cA    );
 
                 printf ("ingrese la primer matriz\n");
                 leer_matriz (fA, cA, A);
@@ -103,10 +101,39 @@ int main () {
 
             case 3:
                 printf("Ingrese cantidad de filas y columnas de la primer matriz:\n");
-                scanf("%d %d", &fA, &cB);
+                scanf("%d %d", &fA, &cA);
+                leer_matriz (fA, cA, A);
 
-                printf("Ingrese cantidad de columnas de la segunda matriz:\n");
-                scanf("%d", &cB);
+                printf("Ingrese cantidad de filas y columnas de la segunda matriz:\n");
+                scanf("%d %d", &fB, &cB);
+
+                if (cA != fB) {
+                    printf ("Error, las columnas de A deben ser iguales a las filas de B:\n");
+                }
+
+                printf("Ingrese la primer matriz:\n");
+                    leer_matriz(fA, cA, A);
+
+                printf("Ingrese la segunda matriz:\n");
+                    leer_matriz(fB, cB, B);
+                
+                leer_matriz(fB, cB, B);
+                multiplicar_matriz(fA, cA, cB, A, B, R);
+                imprimir_matriz(fA, cA, R);
+
+                break;
+                
+                case 4:
+
+                case 5:
+                printf("Usted cerro el programa:\n");
+
+                break;
+
+                default:
+                printf("Opcion invalida, ingrese una opcion del 1 al 5:\n");
+                
+                break;
         }
 
     } while (opcion != 4);
@@ -119,6 +146,7 @@ int main () {
 // agregar para que saque el rango
 // agregar para que multiplique por un numero
 // rafa la concha de tu madre
+// rafa la concha de tu madre x2
 // agregar para que haga la transposicion
 // agregar para que haga la reduccion de forma escalonada
 // que tenga soporte para fracciones y numeros complejos(numeros con i)
