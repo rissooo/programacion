@@ -115,13 +115,11 @@ int main () {
 }
 
 // agregar para que calcule la determinante
-// agregar para que saque la invertida
+// agregar para que saque la inversa
 // agregar para que saque el rango
 // agregar para que multiplique por un numero
-// rafa la concha de tu madre
 // agregar para que haga la transposicion
-// agregar para que haga la reduccion de forma escalonada
-// que tenga soporte para fracciones y numeros complejos(numeros con i)
+// que tenga soporte para fracciones 
 // IMPORTANTE: que tenga mensajes de error
 
 
