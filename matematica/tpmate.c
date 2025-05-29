@@ -145,11 +145,6 @@ int main () {
 // agregar para que saque la inversa
 // agregar para que saque el rango
 // agregar para que multiplique por un numero
-<<<<<<< HEAD
-=======
-// rafa la concha de tu madre
-// rafa la concha de tu madre x2
->>>>>>> a589bcc255b27eeb449375b4dfe7444120064b0e
 // agregar para que haga la transposicion
 // que tenga soporte para fracciones 
 // IMPORTANTE: que tenga mensajes de error
