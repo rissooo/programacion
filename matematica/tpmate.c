@@ -28,7 +28,7 @@ void sumar_matriz(int f, int c, int a[][MAX], int b [][MAX], int r[][MAX]) {
     for (int i = 0; i < f; i++) {
         for (int j = 0; j < c; j++) {
             r[i][j] = a[i][j] + b[i][j];
-        }  
+        }
     }
 }
 // resta la matriz
@@ -69,7 +69,7 @@ int main () {
         switch (opcion) {
             case 1:
                 printf("ingrese las filas y columnas de la matriz\n");
-                scanf ("%d %d", &fA, &cA    );
+                scanf ("%d %d", &fA, &cA);
 
                 printf ("ingrese la primer matriz\n");
                 leer_matriz (fA, cA, A);
@@ -117,21 +117,18 @@ int main () {
                 printf("Ingrese la segunda matriz:\n");
                     leer_matriz(fB, cB, B);
                 
-                leer_matriz(fB, cB, B);
                 multiplicar_matriz(fA, cA, cB, A, B, R);
                 imprimir_matriz(fA, cA, R);
 
                 break;
                 
                 case 4:
-
-                case 5:
-                printf("Usted cerro el programa:\n");
+                    printf("Usted cerro el programa:\n");
 
                 break;
 
                 default:
-                printf("Opcion invalida, ingrese una opcion del 1 al 5:\n");
+                printf("Opcion invalida, ingrese una opcion del 1 al 4:\n");
                 
                 break;
         }
@@ -141,15 +138,11 @@ int main () {
     return 0;
 }
 
-// agregar para que calcule la determinante
-// agregar para que saque la invertida
-// agregar para que saque el rango
+// agregar para que calcule la determinante 
+// agregar para que saque la inversa
 // agregar para que multiplique por un numero
-// rafa la concha de tu madre
-// rafa la concha de tu madre x2
 // agregar para que haga la transposicion
-// agregar para que haga la reduccion de forma escalonada
-// que tenga soporte para fracciones y numeros complejos(numeros con i)
+// agregar para que haga potencia de matriz
+// agregar que tenga soporte para fracciones
 // IMPORTANTE: que tenga mensajes de error
-
 
