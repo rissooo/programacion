@@ -28,7 +28,7 @@ void sumar_matriz(int f, int c, int a[][MAX], int b [][MAX], int r[][MAX]) {
     for (int i = 0; i < f; i++) {
         for (int j = 0; j < c; j++) {
             r[i][j] = a[i][j] + b[i][j];
-        }  
+        }
     }
 }
 // resta la matriz
@@ -214,6 +214,10 @@ int main () {
                 leer_matriz  (fA, cA, A);
 
                 printf("Ingrese la segunda matriz:\n");
+                leer_matriz(fB, cB, B);
+                
+                multiplicar_matriz(fA, cA, cB, A, B, R);
+                imprimir_matriz(fA, cA, R);
                 leer_matriz(fB, cB, B);
                 
                 multiplicar_matriz(fA, cA, cB, A, B, R);
