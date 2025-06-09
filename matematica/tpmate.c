@@ -214,22 +214,15 @@ int main () {
                 leer_matriz  (fA, cA, A);
 
                 printf("Ingrese la segunda matriz:\n");
-<<<<<<< HEAD
                     leer_matriz(fB, cB, B);
                 
                 multiplicar_matriz(fA, cA, cB, A, B, R);
                 imprimir_matriz(fA, cA, R);
 
                 break;
-                
-                case 4:
-                    printf("Usted cerro el programa:\n");
-
-                break;
 
                 default:
                 printf("Opcion invalida, ingrese una opcion del 1 al 4:\n");
-=======
                 leer_matriz(fB, cB, B);
                 
                 multiplicar_matriz(fA, cA, cB, A, B, R);
@@ -279,7 +272,6 @@ int main () {
                 obtener_menor(fA, A, excl_i - 1, excl_j - 1, menor);
                 printf("Menor de la matriz (sin fila %d y columna %d):\n", excl_i, excl_j);
                 imprimir_matriz(fA - 1, fA - 1, menor);
->>>>>>> 9cbb28630fac9c2d18c4ece573ca471eeff7e170
                 
                 break;
             
@@ -349,15 +341,3 @@ int main () {
 
     return 0;
 }
-<<<<<<< HEAD
-
-// agregar para que calcule la determinante 
-// agregar para que saque la inversa
-// agregar para que multiplique por un numero
-// agregar para que haga la transposicion
-// agregar para que haga potencia de matriz
-// agregar que tenga soporte para fracciones
-// IMPORTANTE: que tenga mensajes de error
-
-=======
->>>>>>> 9cbb28630fac9c2d18c4ece573ca471eeff7e170
