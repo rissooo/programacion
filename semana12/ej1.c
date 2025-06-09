@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+<<<<<<< HEAD
 float sumar (float num1, float num2, float resultado) {
     resultado = num1 + num2;
 }
@@ -33,4 +34,20 @@ int main (){
 
     } while (opcion != 5);
     
+=======
+char mensajeBienvendia (char primerainicial) {
+    printf("Bienvenido %c\n", primerainicial);
+    return primerainicial;
+}
+
+int main() {
+    char inicial;
+
+    printf("Ingrese la inicial de su nombre: ");
+    scanf(" %c", &inicial);
+
+    mensajeBienvendia(inicial);
+
+    return 0;
+>>>>>>> daaa8415ef86172e01719654b921b16a4315fc55
 }
