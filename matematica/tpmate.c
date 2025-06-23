@@ -214,22 +214,10 @@ int main () {
                 leer_matriz  (fA, cA, A);
 
                 printf("Ingrese la segunda matriz:\n");
-<<<<<<< HEAD
-                    leer_matriz(fB, cB, B);
-                
-                multiplicar_matriz(fA, cA, cB, A, B, R);
-                imprimir_matriz(fA, cA, R);
-
-                break;
-
-                default:
-                printf("Opcion invalida, ingrese una opcion del 1 al 4:\n");
-=======
                 leer_matriz(fB, cB, B);
                 
                 multiplicar_matriz(fA, cA, cB, A, B, R);
                 imprimir_matriz(fA, cA, R);
->>>>>>> daaa8415ef86172e01719654b921b16a4315fc55
                 leer_matriz(fB, cB, B);
                 
                 multiplicar_matriz(fA, cA, cB, A, B, R);
@@ -347,14 +335,5 @@ int main () {
     } while (opcion != 9);
 
     return 0;
-<<<<<<< HEAD
-}
-=======
-
-}
-<<<<<<< HEAD
 
 //terminar de poner los comentarios
-=======
->>>>>>> daaa8415ef86172e01719654b921b16a4315fc55
->>>>>>> 663a17c554d51e18a366673419f7e4875951a26b
