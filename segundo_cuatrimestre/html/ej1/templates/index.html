@@ -1,36 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>index</title>
-        <style></style>
-    </head>
-    <body>
-        <header>
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: black;
+            background-color: white;
+        }
+
+        header h3 {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+        img {
+            margin-top: 10px;                              
+            display: block;
+        }
+
+        .destacado {
+            margin-top: 20px;
+            background-color: yellow;
+            padding: 10px;
+            border-left: 4px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
         <h3>Estos enlaces te llevan a:</h3>
         <ul>
             <li><a href="index.html">index</a></li>
-            <li><a href="galeria.html">galeria</a></li>
+            <li><a href="galeria.html">galería</a></li>
             <li><a href="tabla.html">tabla</a></li>
             <li><a href="listas.html">listas</a></li>
             <li><a href="https://www.google.com" target="_blank">Google</a></li>
         </ul>
-        </header>
-        <main>
-            <section>
+    </header>
+    <main>
+        <section>
             <div>
                 <h2>Bienvenidos</h2>
-                <p>Este es el contenido principal de mi pagina</p>
+                <p>Este es el contenido principal de mi página</p>
             </div>
-                <div>
-                <p>Soy un chico de 19 años que estudia programacion</p>
+            <div>
+                <p>Soy un chico de 19 años que estudia programación</p>
                 <img src="galletitas.png" alt="Mis galletitas favoritas" width="300">
-                </div>
-            </section>
-            <section>
-                <p><mark><i><strong><h4><b> <u><br>Las Tortitas Black son galletitas dulces, crujientes y rellenas de crema de chocolate. Su sabor intenso y textura suave las hace irresistibles. Perfectas para acompañar café, té o compartir con amigos y familia</u></b></h6></strong></i></mark></p>               
-            </section>
-        </main>
-        <footer>
-        </footer>
-    </body>
+            </div>
+        </section>
+        <section class="destacado">
+            <h4>Las Tortitas Black</h4>
+            <p><strong>Son galletitas dulces, crujientes y rellenas de crema de chocolate.</strong> Su sabor intenso y textura suave las hace irresistibles. Perfectas para acompañar café, té o compartir con amigos y familia.</p>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
 </html>
