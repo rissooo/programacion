@@ -16,7 +16,25 @@ void cargarDatos(int asistencias[max], char nombres[max][maxDias]) {
 
             if (asistencias[j] != 1 && asistencias[j] != 0) {
                 printf ("ERROR: ingrese 1 si se presento o 0 si falto al la clase");
+                i--;
             }
         }
     }
+}
+
+void mostrarTotal (int asistencias[max][maxDias], char nombres[max][maxDias]) {
+    for (int i = 0; i < max; i++) {
+        int total;
+        for (int j = 0; j < maxDias; j++){
+        total += asistencias[i][j];
+        printf ("El total de asistencias de cada estudiante es\n", nombres[i], nombres);
+        }
+    }
+}
+
+void mostrarAsistencia (int asistencias[max], char nombres[max][maxDias]) {
+    int mayor = 0;
+    for (int j = 0; j < maxDias; j++) {
+        if 
+    } 
 }
