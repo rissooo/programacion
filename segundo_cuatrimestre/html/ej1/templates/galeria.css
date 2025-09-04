@@ -1,0 +1,47 @@
+.fotos {
+    border: 100;
+    width: 800;
+    max-width: 900;
+    margin: 10;
+    height: 300;
+}
+
+.posicion {
+    position: relative;
+    padding-left: 160px;
+    width: 300px;
+    height: 150px;
+    background-color: aqua;
+}
+
+.titulo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+.card img :hover{
+    width: 200px;
+    border-radius: 8px;
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.fotos {
+    background-image: url('img/pepas.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 400px;
+
+    animation-name: galeriaPulse;
+    animation-duration: 4s;
+    animation-delay: 0,5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes galeriaPulse {
+    from {transform: scale(1); opacity: 0.95;}
+    to {transform: scale(1.03); opacity: 1;}
+}

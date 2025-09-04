@@ -1,0 +1,23 @@
+.container-s2 {
+    position: fixed;
+    text-align: justify;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    max-width: 1200px;
+    height: auto;
+}
+
+h2, h3, h4 {
+    font-weight: 100;
+    font-size: large;
+}
+
+.container-s1 {
+    position: fixed;
+    margin-top: 10;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
