@@ -5,8 +5,8 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-function saludar () {
-  console.log ("hola")
+function saludo (nombre) {
+    console.log ("hola", nombre, "como estas hoy?")
 }
 
-saludar()
+rl.question ("Ingrese un nombre") 
