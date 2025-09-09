@@ -2,5 +2,16 @@ html
 <button id="toggleBtn">Mostrar/Ocultar</button>
 <p id="texto" style="display: none;">¡Texto secreto!</p>
 <script>
-    
+    const boton = document.getElementById("toggleBtn")
+
+    boton.addEventListener("click", () => {
+        let ocultar = document.getElementById("texto") 
+        let desocultar = ocultar.style.display
+        
+        if (desocultar === "none") {
+            ocultar.style.display = "block" 
+        } else {
+            ocultar.style.display = "none"
+        } 
+    })
 </script>

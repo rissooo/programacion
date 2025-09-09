@@ -1,0 +1,18 @@
+html
+<button id="temaOscuro">Tema oscuro</button>
+<button id="temaClaro">Tema claro</button>
+<div id="contenido">
+<h2>Mi contenido</h2>
+<p>Este es un texto de ejemplo.</p>
+</div>
+<style>
+.oscuro { background-color: #333; color: white; }
+.claro { background-color: white; color: black; }
+</style>
+<script>
+    const botonClaro = document.getElementById("claro")
+    const botonOscuro = document.getElementById("oscuro")
+
+    botonClaro.classList.toggle("claro") 
+    botonOscuro.classList.toggle("oscuro")
+</script>
