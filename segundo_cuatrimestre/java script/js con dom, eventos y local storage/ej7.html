@@ -1,0 +1,12 @@
+html
+<textarea id="miTexto" rows="4" cols="50" placeholder="Escribe
+aquí..."></textarea>
+<p>Caracteres: <span id="contador">0</span>/100</p>
+<script>
+    const input = document.getElementById("miTexto")
+    const contador = document.getElementById("contador")
+
+    input.addEventListener("input", () => {
+        contador.textContent = input.value.length
+    })
+</script>

@@ -1,0 +1,21 @@
+html
+<button id="cambiarColor">Cambiar color</button>
+
+<script>
+const color = document.getElementById("cambiarColor")
+
+const doc = document.body.style.backgroundColor
+alert (doc)
+
+color.addEventListener("click", () => {
+    if (doc === "black" || doc === "") {
+        document.body.style.backgroundColor = "white"
+        
+        doc = document.body.style.backgroundColor
+        alert (doc)
+    } else if (doc === "white") {
+        document.body.style.backgroundColor = "black"
+        doc = document.body.style.backgroundColor
+    }
+})
+</script>

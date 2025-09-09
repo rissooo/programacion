@@ -1,0 +1,16 @@
+html
+<input type="text" id="tarea" placeholder="Nueva tarea">
+<button id="agregarTarea">Agregar</button>
+<ul id="listaTareas">
+<li>Tarea 1 <button class="eliminar">X</button></li>
+<li>Tarea 2 <button class="eliminar">X</button></li>
+</ul>
+<script> 
+    const eliminar = document.querySelectorAll(".eliminar")
+
+    eliminar.forEach(boton => {
+        boton.addEventListener("click", () => {
+            boton.parentElement.remove()
+        })
+    })
+</script>

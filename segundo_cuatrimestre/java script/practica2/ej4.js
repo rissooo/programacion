@@ -1,3 +1,4 @@
+const { NONAME } = require("dns");
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -9,4 +10,7 @@ function saludo (nombre) {
     console.log ("hola", nombre, "como estas hoy?")
 }
 
-rl.question ("Ingrese un nombre") 
+rl.question ("Ingrese un nombre\n", (nombre) => {
+     saludo(nombre)
+     rl.close()
+}) 
