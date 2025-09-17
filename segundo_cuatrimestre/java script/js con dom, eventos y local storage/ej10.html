@@ -1,0 +1,14 @@
+<input type="number" id="celsius" placeholder="Grados Celsius">
+<button id="convertir" type="button">Convertir a Fahrenheit</button>
+<p>Resultado: <span id="resultado">--</span> °F</p>
+<script>
+const input = document.getElementById("celsius")
+const boton = document.getElementById("convertir")
+const salida = document.getElementById("resultado")
+
+boton.addEventListener("click", () => {
+    const celsius = Number(input.value)
+    const Fahrenheit = (celsius * 9/5) + 32
+    salida.textContent = Fahrenheit.toFixed(2)
+})
+</script>
