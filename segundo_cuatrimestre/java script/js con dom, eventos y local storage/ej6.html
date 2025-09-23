@@ -10,9 +10,6 @@ html
 .claro { background-color: white; color: black; }
 </style>
 <script>
-    const botonClaro = document.getElementById("claro")
-    const botonOscuro = document.getElementById("oscuro")
-
-    botonClaro.classList.toggle("claro") 
-    botonOscuro.classList.toggle("oscuro")
+    const botonClaro = document.getElementById("claro").classList.toggle("claro")
+    const botonOscuro = document.getElementById("oscuro").classList.toggle("oscuro")
 </script>
