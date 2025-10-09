@@ -1,5 +1,7 @@
-cadena = input("ingrese una cadena de texto")
-
-lista = cadena
-
-print(lista)
+class  articulo:
+    def __init__(self, nombre, costo):
+        self.nombre = nombre
+        self.costo = costo
+        
+    def descripcion (self):
+        return f"item: {self.nombre}, {self.costo}"
