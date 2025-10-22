@@ -69,7 +69,7 @@ void mostrar(char nombres[][30], float precios[], int cantidad) {
 
 int main () {
     char nombres;
-    int cantidad, opcion;
+    int cantidad, opcion, mayor;
     float precios;
     do {
         printf ("\n------MENU------\n");
@@ -91,6 +91,6 @@ int main () {
             case 3: calculos(nombres, mayor);
             break;
         }
-    } while (opcion != 5;)
+    } while (opcion != 5);
 }
   

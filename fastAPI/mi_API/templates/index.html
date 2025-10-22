@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestor de Tareas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <div class="card shadow-lg p-4">
+      <h1 class="text-center mb-4">Gestor de Tareas</h1>
+
+      <!-- FORMULARIO NUEVA TAREA -->
+      <div class="mb-4">
+        <h5>Crear nueva tarea</h5>
+        <div class="input-group">
+          <input id="titulo" type="text" class="form-control" placeholder="Escribí una tarea...">
+          <button class="btn btn-primary" onclick="crearTarea()">Agregar</button>
+        </div>
+      </div>
+
+      <!-- LISTA DESPLEGABLE -->
+      <div class="mb-4">
+        <h5>Seleccioná una tarea</h5>
+        <select id="tareas" class="form-select" onchange="mostrarTarea()">
+          <option value="">-- Elegí una tarea --</option>
+        </select>
+      </div>
+
+      <!-- DETALLE -->
+      <div id="detalle" class="p-3 rounded bg-white border"></div>
+
+      <!-- BOTÓN REFRESCAR -->
+      <div class="text-center mt-4">
+        <button class="btn btn-outline-secondary" onclick="cargarTareas()">Actualizar lista</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let cacheTareas = [];
+
+    async function cargarTareas() {
+      const res = await fetch(`/tareas`);
+      cacheTareas = await res.json();
+      const select = document.getElementById("tareas");
+      select.innerHTML = '<option value="">-- Elegí una tarea --</option>';
+      cacheTareas.forEach(t => {
+        const option = document.createElement("option");
+        option.value = t.id;
+        option.textContent = `${t.titulo} ${t.completada ? "✔" : "⏳"}`;
+        select.appendChild(option);
+      });
+    }
+
+    function mostrarTarea() {
+      const id = document.getElementById("tareas").value;
+      const detalleDiv = document.getElementById("detalle");
+      if (id === "") {
+        detalleDiv.innerHTML = "";
+        return;
+      }
+
+      const tarea = cacheTareas.find(t => String(t.id) === String(id));
+      if (!tarea) {
+        detalleDiv.innerHTML = '<div class="text-danger">Tarea no encontrada</div>';
+        return;
+      }
+
+      detalleDiv.innerHTML = `
+        <h4>${tarea.titulo}</h4>
+        <p><strong>ID:</strong> ${tarea.id}</p>
+        <p><strong>Estado:</strong>
+          <span class="badge ${tarea.completada ? 'bg-success' : 'bg-warning text-dark'}">
+            ${tarea.completada ? 'Completada' : 'Pendiente'}
+          </span>
+        </p>
+      `;
+    }
+
+    async function crearTarea() {
+      const titulo = document.getElementById("titulo").value.trim();
+      if (!titulo) return alert("Escribí una tarea primero");
+
+      await fetch(`/tareas`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ titulo, completada: false })
+      });
+
+      document.getElementById("titulo").value = "";
+      await cargarTareas();
+    }
+
+    // Cargar tareas al iniciar
+    cargarTareas();
+  </script>
+</body>
+</html>
