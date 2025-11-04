@@ -1,40 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#define estudiantes 6
+#define dias 5
+#define nombre 30
 
-#define max 6
-#define maxDias 5
-
-void cargarDatos(int asistencias[max], char nombres[max][maxDias]) {
-    for (int i = 0; i < max; i++) {
-        printf ("Ingrese nombre del estudiante-%d\n", i + 1);
-        scanf ("%49s", nombres[i]);
-
-        for (int j = 0; j < maxDias; j++) {
-            printf ("Ingrese 1 si asistio o 0 si falto a la clase\n");
-            scanf ("%d", &asistencias[j]);
-
-            if (asistencias[j] != 1 && asistencias[j] != 0) {
-                printf ("ERROR: ingrese 1 si se presento o 0 si falto al la clase");
-                i--;
-            }
+void carga (char Estudiantes[estudiantes][nombre], int Dias[estudiantes][dias]) {
+    for (int i = 0; i < estudiantes; i++) {   
+        printf ("ingrese nombre del estudiante", i + 1);
+        scanf ("%s", Estudiantes[i]);
+        for (int j = 0; j < dias; j++) {
+            printf("asistio a la clase del dia %d? 1=si, 2=no", j + 1);
+            scanf ("%d", &Dias[i][j]);
         }
     }
 }
 
-void mostrarTotal (int asistencias[max][maxDias], char nombres[max][maxDias]) {
-    for (int i = 0; i < max; i++) {
-        int total;
-        for (int j = 0; j < maxDias; j++){
-        total += asistencias[i][j];
-        printf ("El total de asistencias de cada estudiante es\n", nombres[i], nombres);
+void total (char Estudiantes[estudiantes][nombre], int Dias[estudiantes][dias], int *total) {
+    for (int i = 0; i < estudiantes; i++) {
+        for (int j = 0; j < dias; j++) {
+            *total += Dias[i][j];
         }
     }
 }
 
-void mostrarAsistencia (int asistencias[max], char nombres[max][maxDias]) {
-    int mayor = 0;
-    for (int j = 0; j < maxDias; j++) {
-        if 
-    } 
+void mas_asistencias (char Estudiantes[estudiantes][nombre], int Dias[estudiantes][dias], int *mayor) {
+    *mayor = 0;
+    for (int j = 0; j < dias; j++) {
+        *mayor += Dias[0][j];
+    }
+}
+
+void asistenciasXdia (char Estudiantes[estudiantes][nombre], int Dias[estudiantes][dias]) {
+    for (int i = 0; i < estudiantes; i++) {
+        for (int j = 0; j < dias; j++) {
+            printf("%d ", Dias[i][j]);
+        }
+    }
+}
+
+switch (opcion) {
+    printf ("----menu----"):
+    printf ("elija una opcion:");
+    printf ("")
 }
