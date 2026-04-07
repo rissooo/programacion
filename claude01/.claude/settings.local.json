@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker compose:*)",
+      "Bash(where docker:*)",
+      "Read(//c/Program Files/Docker/Docker/resources/**)",
+      "Read(//mnt/c/Program Files/Docker/Docker/resources/**)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/Maximo/AppData/Local/Docker//**)",
+      "Bash(cmd.exe /c \"where docker 2>&1\")",
+      "Bash(cmd.exe /c \"where docker\")",
+      "Bash(powershell.exe -Command \"Get-Command docker -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Bash(powershell.exe -Command \"docker version 2>&1 | Select-Object -First 3\")",
+      "Bash(export PATH=\"$PATH:/c/Program Files/Docker/Docker/resources/bin\")",
+      "Bash(docker exec:*)",
+      "Bash(xargs wc:*)"
+    ]
+  }
+}
